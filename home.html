@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-color:#C0C0C0
+}
+* {
+ font-size: 100%;
+ font-family: Arial;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4cafa1;
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #333;
+  font-family: Times New Roman, Serif;
+}
+p {
+  text-indent: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: Times New Roman, Serif;
+  font-size: 18px;
+}
+</style>
+<body>
+<ul>
+  <li><a class="active"href="home.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="support.html">Support</a></li>
+  <li style="float:right"><a href="#login">Login</a></li>
+</ul>
+
+<h2>Welcome to Logros!</h2>
+<p>Our purpose in the Logros community is to help you keep track of your goals. Students can now monitor their progress towards graduation online. </p>
+<!-- Slide Show -->
+<section>
+  <img class="Slides" src="students.jpg"
+  style="width:100%">
+  <img class="Slides" src="students2.jpg"
+  style="width:100%">
+</section>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("Slides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+</body>
+</html>
+
